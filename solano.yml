@@ -1,0 +1,8 @@
+nodejs:
+  version: "5"
+environment:
+  DEPLOY_VERSION: 'testing'
+hooks:
+  pre: "npm config set spin false && node . install -g . && mkdir -p /var/run/couchdb"
+tests:
+  - "npm test"
